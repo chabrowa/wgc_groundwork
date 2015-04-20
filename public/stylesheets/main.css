@@ -13,9 +13,14 @@ body {
   color: white;
   padding-top: 130px;
 }
-.top h3,h4 {
+.top h4{
   text-align: center;
 }
+
+.top h3{
+  text-align: center;
+}
+
 .clearFix {
   clear: both;
 }
