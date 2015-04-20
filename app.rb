@@ -10,9 +10,12 @@ enable :sessions
 
 get '/primes' do
   # TODO - Can we make this dynamic?
+  if(params['upperBoundary'])
+    limit = params['upperBoundary']
+  else
+    limit = 100
+  end
   
-  limit = request.post?upperBoundary
-  puts limit
   # TODO - add your prime number solution in the primes.rb file.
   @sum = Primes.sum_to(limit)
 
