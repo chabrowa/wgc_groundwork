@@ -10,8 +10,9 @@ enable :sessions
 
 get '/primes' do
   # TODO - Can we make this dynamic?
-  limit = 100
-
+  
+  limit = request.post?upperBoundary
+  puts limit
   # TODO - add your prime number solution in the primes.rb file.
   @sum = Primes.sum_to(limit)
 
@@ -41,3 +42,6 @@ include Sinatra::OauthRoutes
 def trainee
   @trainee ||= WeGotCoders::Trainee.new(settings.site_url, session[:access_token])
 end
+
+
+
