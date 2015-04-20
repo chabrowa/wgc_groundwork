@@ -1,6 +1,22 @@
-<% if @profile %>
-  <h3><%= @profile["first_name"] %>'s Amazing Profile</h3>
 
+<% if @profile %>
+<div class="top">
+  <div class="insideTop">
+    <div id="authorPhoto"></div>
+    <h3><%= @profile["github"]%></h3>
+    <h3><%= @profile["first_name"]+" "+@profile["last_name"]%></h3>
+    <h4>Date of birth: <%= @profile["dob"] %></h4>
+    <h4>Phone number: <%= @profile["phone_number"] %> </h4>
+    <h4>Status: <%= @profile["employment_status"] %></h4>
+    <ul>
+      <li class="link"><a href="https://www.facebook.com/emilia.kacprzak.1"><i class="fa fa-facebook"></i></a></li>
+      <li class="link"><a href="https://github.com/<%= @profile["github"] %>"><i class="fa fa-github"></i></a></li>
+      <li class="link"><a href="https://twitter.com/szabrowa"><i class="fa fa-twitter"></i></a></li>
+      <li class="link"><a href="http://wegotcoders.com"> <img src="/images/logoShort.png"/></a></li>
+    </ul>
+    <div class="clearFix"></div>   
+  </div>
+</div>
   <!-- TODO- Perhaps re-jig this to fit your new design / layout -->
   <% @profile.each do |field, value| %>
     <div class="profile-section box">

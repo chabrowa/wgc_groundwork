@@ -5,14 +5,46 @@ body {
   color: #333;
 }
 
-#logo {
+.top {
+  background-image: url(../images/photoBlur.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 550px;
+  color: white;
+  padding-top: 130px;
+}
+.top h3,h4 {
   text-align: center;
 }
-
-#content {
-  padding: 1em;
+.clearFix {
+  clear: both;
 }
-
+.top ul {
+  width: 250px;
+  margin: 0 auto;
+}
+#authorPhoto {
+  background-image: url(../images/photoFactory.jpg);
+  height: 236px;
+  width: 236px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.insideTop {
+  height: 400px;
+  width: 350px;
+  /*background-color: white;*/
+  margin: 0 auto;
+}
+.link {
+  float: right;
+  font-size: 40px;
+  margin: 0 12px;
+}
+.link i {
+  color: whitesmoke;
+}
 .box {
   border: 1px solid #999;
   background: #FCFCFC;
