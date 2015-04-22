@@ -1,13 +1,12 @@
 class Primes
   def self.sum_to(limit = 100)
-    upperB = 100
-    prime_number_array = Array.new(upperB, true)
+    prime_number_array = Array.new(limit, true)
 
-    square_root = Math.sqrt(upperB)
-    for i in 2..square_root.to_i
+    square_root = Math.sqrt(limit)
+    for i in 2..square_root.ceil
       if prime_number_array[i]
           w = i * i
-          while w <= upperB do
+          while w <= limit do
               prime_number_array[w] = false
               w += i
           end
@@ -15,11 +14,12 @@ class Primes
     end
     prime_number_array[0] = false;
     prime_number_array[1] = false;
-    for i in 2..upperB
+    sum = 0
+    for i in 2..limit
       if prime_number_array[i]
-          print i
+          sum += i
       end
     end
-    return "gfcvjgbvjughb"
+    return sum
   end
 end

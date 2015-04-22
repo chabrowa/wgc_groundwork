@@ -11,7 +11,7 @@ enable :sessions
 get '/primes' do
   # TODO - Can we make this dynamic?
   if(params['upperBoundary'])
-    limit = params['upperBoundary']
+    limit = params['upperBoundary'].to_i
   else
     limit = 100
   end

@@ -21,6 +21,9 @@ body {
   text-align: center;
 }
 
+.primeNumbers{
+  text-align: center;
+}
 .clearFix {
   clear: both;
 }
